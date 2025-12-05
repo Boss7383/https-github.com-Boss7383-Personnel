@@ -33,8 +33,8 @@ public class PersonnelDAO {
         }
 
         String sql = "INSERT INTO personnel " +
-                "(nom, prenom, date_naissance, adresse, ville, cp, email, telephone, genre, taille, poids, dateEmbauche, finContrat) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                "(nom, prenom, date_naissance, adresse, ville, cp, email, telephone, genre, taille, poids, dateEmbauche, finContrat, statut) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         // 🔹 Connexion et préparation de la requête
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -54,6 +54,7 @@ public class PersonnelDAO {
                 ps.setFloat(11, p.poids);
                 ps.setString(12, p.dateEmbauche);
                 ps.setString(13, p.finContrat);
+                ps.setString(14, p.statut);
 
                 /*
                 ps.setDate(12, p.dateEmbauche != null ? java.sql.Date.valueOf(p.dateEmbauche) : null);
