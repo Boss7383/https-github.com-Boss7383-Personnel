@@ -17,6 +17,7 @@ public class Personnel {
     public float poids;
     public String dateEmbauche;
     public String finContrat;
+    public String statut;
 
     // Constructeur vide
     public Personnel() {}
@@ -24,7 +25,7 @@ public class Personnel {
     // Constructeur complet
     public Personnel(String nom, String prenom, LocalDate dateNaissance, String adresse, String ville,
                      String cp, String email, String telephone, String genre,
-                     float taille, float poids, String dateEmbauche, String finContrat) {
+                     float taille, float poids, String dateEmbauche, String finContrat, String statut) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -38,6 +39,7 @@ public class Personnel {
         this.poids = poids;
         this.dateEmbauche = dateEmbauche;
         this.finContrat = finContrat;
+        this.statut = statut;
     }
 
     // toString pour affichage rapide
@@ -53,7 +55,11 @@ public class Personnel {
                 "Téléphone : " + telephone + "\n" +
                 "Genre : " + genre + "\n" +
                 "Taille : " + taille + " m\n" +
-                "Poids : " + poids + " kg\n";
+                "Poids : " + poids + " kg\n" +
+                "Date Embauche : " + dateEmbauche + "\n" +
+                "Fin Contrat : " + finContrat + "\n" +
+                "Statut : " + statut;
+
     }
 
     // Méthode displayInfo() pour affichage détaillé
@@ -71,5 +77,6 @@ public class Personnel {
         System.out.println("Poids : " + poids + " kg");
         System.out.println("Date Embauche : " + dateEmbauche);
         System.out.println("Fin Contrat : " + finContrat);
+        System.out.println("Statut : " + statut);
     }
 }

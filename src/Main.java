@@ -67,6 +67,9 @@ public class Main {
             System.out.print("Date de fin de contrat (dd/MM/yyyy) : ");
             p.finContrat = sc.nextLine();   // peut rester vide si non fournie
 
+            System.out.println("Statut : ");
+            p.statut = sc.nextLine();
+
 
             /* Saisie des dates de contrat
             while (true) {
