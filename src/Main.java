@@ -52,8 +52,9 @@ public class Main {
             System.out.print("Téléphone : ");
             p.telephone = sc.nextLine();
 
-            System.out.print("Genre : ");
-            p.genre = sc.nextLine();
+            System.out.print("Sexe (M/F) : ");
+            String saisieSexe = sc.nextLine();
+            p.sexe = !saisieSexe.isEmpty() ? saisieSexe.charAt(0) : ' ';
 
             System.out.print("Taille (en m) : ");
             p.taille = Float.parseFloat(sc.nextLine());
@@ -69,6 +70,12 @@ public class Main {
 
             System.out.println("Statut : ");
             p.statut = sc.nextLine();
+
+            System.out.println("Rôle : ");
+            p.role = sc.nextLine();
+
+            System.out.print("Experience (en année) : ");
+            p.experience = Integer.parseInt(sc.nextLine());
 
 
             /* Saisie des dates de contrat
